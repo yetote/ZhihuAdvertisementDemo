@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--内容item-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/item_content_iv"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_content_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:id="@+id/item_content_cardView_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/item_content_cardView_rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/testTitle"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title" />
+
+            <TextView
+                android:id="@+id/item_content_cardView_rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/item_content_cardView_rl_title"
+                android:ellipsize="end"
+                android:maxLines="7"
+                android:padding="10dp"
+                android:text="@string/testContent"
+                android:textSize="@dimen/content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
